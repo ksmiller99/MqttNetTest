@@ -5,4 +5,3 @@ This project demonstrates a possible bug in MQTTNet where published messages are
 <p>There are only 3 *.cs files, but 6 projects. This is because each file is compiled to both .NET Framework 4.5.2 and to .NET Core 2.0. My requirements are that the publisher use .NET Framework, and the subscriber use .NET Core.
 <p>To use this start the broker, publisher and subscriber. In the publisher window, press the "P" key to itereate a for-next loop to publish 10 topics quickly. In the subscriber window, you should see the last message received 10 times. The debug window shows that the last message was published 10 times.
 <h3>Publisher Screenshot</h3>
-![alt text](MqttNetTest/Images/publisher.png "Publisher Screenshot")
