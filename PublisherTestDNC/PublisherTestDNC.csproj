@@ -1,20 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <ApplicationIcon />
     <OutputType>Exe</OutputType>
     <StartupObject />
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Include="..\TestPublisherDNF\Publisher.cs" Link="Publisher.cs" />
   </ItemGroup>
-
+  <ItemGroup>
+    <PackageReference Include="MQTTnet" Version="2.7.1" />
+  </ItemGroup>
   <ItemGroup>
     <Reference Include="MQTTnet">
       <HintPath>..\TestBrokerDNF\bin\Debug\MQTTnet.dll</HintPath>
     </Reference>
   </ItemGroup>
-
 </Project>
