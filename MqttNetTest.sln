@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MqttNetTest", "MqttNetTest\MqttNetTest.csproj", "{D6143C46-CAEF-4286-A109-DC2AB2F14F79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokerTestDNF", "TestBrokerDNF\BrokerTestDNF.csproj", "{B9C402AF-9B34-4930-86B9-C25212EE42BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublisherTestDNF", "TestPublisherDNF\PublisherTestDNF.csproj", "{4FE4671F-A131-41E4-B0F2-460D91F583DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubscriberTestDNF", "TestsubscriberDNF\SubscriberTestDNF.csproj", "{BAB87529-95FA-406D-8148-2301FD5E2518}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokerTestDNC", "BrokerTestDNC\BrokerTestDNC.csproj", "{F5F08780-B885-4FD6-8E8C-37DD10842C08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublisherTestDNC", "PublisherTestDNC\PublisherTestDNC.csproj", "{7CD69245-B85F-472A-AC6F-7132F70F703E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubscriberTestDNC", "SubscriberTestDNC\SubscriberTestDNC.csproj", "{E9976A28-B66D-43CC-B5CF-93EE07BE7C68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +21,30 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D6143C46-CAEF-4286-A109-DC2AB2F14F79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D6143C46-CAEF-4286-A109-DC2AB2F14F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D6143C46-CAEF-4286-A109-DC2AB2F14F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D6143C46-CAEF-4286-A109-DC2AB2F14F79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9C402AF-9B34-4930-86B9-C25212EE42BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9C402AF-9B34-4930-86B9-C25212EE42BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9C402AF-9B34-4930-86B9-C25212EE42BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9C402AF-9B34-4930-86B9-C25212EE42BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FE4671F-A131-41E4-B0F2-460D91F583DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FE4671F-A131-41E4-B0F2-460D91F583DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FE4671F-A131-41E4-B0F2-460D91F583DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FE4671F-A131-41E4-B0F2-460D91F583DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAB87529-95FA-406D-8148-2301FD5E2518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAB87529-95FA-406D-8148-2301FD5E2518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAB87529-95FA-406D-8148-2301FD5E2518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAB87529-95FA-406D-8148-2301FD5E2518}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5F08780-B885-4FD6-8E8C-37DD10842C08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5F08780-B885-4FD6-8E8C-37DD10842C08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5F08780-B885-4FD6-8E8C-37DD10842C08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5F08780-B885-4FD6-8E8C-37DD10842C08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CD69245-B85F-472A-AC6F-7132F70F703E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CD69245-B85F-472A-AC6F-7132F70F703E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CD69245-B85F-472A-AC6F-7132F70F703E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CD69245-B85F-472A-AC6F-7132F70F703E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9976A28-B66D-43CC-B5CF-93EE07BE7C68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9976A28-B66D-43CC-B5CF-93EE07BE7C68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9976A28-B66D-43CC-B5CF-93EE07BE7C68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9976A28-B66D-43CC-B5CF-93EE07BE7C68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
