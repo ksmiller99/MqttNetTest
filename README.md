@@ -8,7 +8,7 @@ This project demonstrates a possible bug in MQTTNet where published messages are
 <h3>Publisher Screenshot - Same for Delay or No Delay</h3>
 <img src="./Images/publisher.png">
 <h3>Subscriber Screenshot - No Delay in Publisher</h3>
-<img src="./Images/subscriber.png.png">
+<img src="./Images/subscriber.png">
 <h3>Subscriber Screenshot - No Delay in Publisher</h3>
 <img src="./Images/subscriber.png">
 <h3>Subscriber Screenshot - 200 ms Delay in Publisher</h3>
