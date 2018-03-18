@@ -1,5 +1,6 @@
 # MqttNetTest
-MSVS Solution that demonstrates possible bug in MQTTNet
+<p><b>Note - 2018-03-18 </b> Issue is solved. There was a bug in my Publisher.cs. I had created the message outside the for-next loop and only updated the topic inside the loop. That means that the message topic was changed while PublishAsync() was sending it. Creating a new message on each iteration solved the issue.
+<p>MSVS Solution that demonstrates possible bug in MQTTNet
 This project demonstrates a possible bug in MQTTNet where published messages are being dropped and the the last message is published several times. Hopefully, I'm doing something wring. If you see my error or know a better work-around, please let me know.
 <p>On line 66 of Publisher.cs is a Thread.Sleep() instruction. Increasing this values causes fewer messages from being dropped until non are dropped.
 <p>There are only 3 *.cs files, but 6 projects. This is because each file is compiled to both .NET Framework 4.5.2 and to .NET Core 2.0. My requirements are that the publisher use .NET Framework, and the subscriber use .NET Core.
