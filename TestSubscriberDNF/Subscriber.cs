@@ -52,7 +52,7 @@ namespace MQTTSubscriberTest
                 await mqttSubscriberClient.StartAsync(options);
                 Console.WriteLine("Sink client started");
 
-                for (int i = 1; i < 10; ++i)
+                for (int i = 0; i < 10; ++i)
                 {
                     var topic = $"source/property/i{i}";
                     await mqttSubscriberClient.SubscribeAsync(new TopicFilterBuilder().WithTopic(topic).WithExactlyOnceQoS()

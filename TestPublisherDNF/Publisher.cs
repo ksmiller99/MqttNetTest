@@ -6,6 +6,7 @@ using MQTTnet.Protocol;
 using System;
 using System.Diagnostics;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace MQTTPublisherTest
 {
@@ -40,14 +41,7 @@ namespace MQTTPublisherTest
 
                 await mqttPublisherClient.StartAsync(options);
                 Console.WriteLine("Source started\n");
-
-                var msg = new MqttApplicationMessage
-                {
-                    QualityOfServiceLevel = MqttQualityOfServiceLevel.ExactlyOnce,
-                    Retain = true,
-                    Payload = new byte[] { 30 }
-                };
-
+                
                 while (true)
                 {
                     Console.WriteLine("Press 'P' to publish, 'X' to exit.");
@@ -57,13 +51,23 @@ namespace MQTTPublisherTest
                     {
                         for (int i = 0; i < 10; ++i)
                         {
-                            msg.Topic = $"source/property/i{i}";
+                            // 2018-03-18 KSM moving the message creation into the for-loop eliminates the need to 
+                            // have a delay inthe loop
+                            var msg = new MqttApplicationMessage
+                            {
+                                Topic = $"source/property/i{i}",
+                                QualityOfServiceLevel = MqttQualityOfServiceLevel.ExactlyOnce,
+                                Retain = true,
+                                Payload = new byte[] { 30 }
+                            };
                             await mqttPublisherClient.PublishAsync(msg);
                             Console.WriteLine($"Published topic: {msg.Topic}");
 
+
+                            //2018-03-18 KSM delay no longer needed when a new message within the above for-loop
                             //***************************************************************
                             //adjust this value to stop published messages from being dropped
-                            Thread.Sleep(0);
+                            //Thread.Sleep(0);
                             //***************************************************************
 
                         }
@@ -79,5 +83,6 @@ namespace MQTTPublisherTest
 
             publisher.Start();
         }
+        
     }
 }
